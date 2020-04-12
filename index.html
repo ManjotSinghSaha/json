@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Gaming World</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+        <script>
+            function logIn() {
+                window.location = "login.html"
+            }
+            
+            function validate() {
+                var username = document.getElementById("email-address");
+                var pass = document.getElementById("password");
+
+                if (username.value == "" || pass.value == "") {
+                    alert("No blanks allowed");
+                    return false;
+                }
+                else {
+                    alert("Thanks for Signing In");
+                    return true;
+                }
+            }
+
+            var upcoming = [
+                {
+                    "Name" : "Prince Of Persia",
+                    "Date" : "15 April 2020",
+                    "Type" : "Adventure"
+                },
+                {
+                    "Name" : "Resident Evil 10",
+                    "Date" : "21 September 2020",
+                    "Type" : "Action"
+                },
+                {
+                    "Name" : "Uncharted 5",
+                    "Date" : "10 July 2020",
+                    "Type" : "Open-World"
+                }
+                
+            ]
+
+            function upcoming(jsonObj){
+                let Products = jsonObj.upcoming;
+                
+                for (let i = 0; i < upcoming.length; i++) {
+
+                    let h2 = document.createElement('h2');
+                    let p1 = document.createElement('p');
+                    let p2 = document.createElement('p');
+
+                    let h2text = document.createTextNode(upcoming[i].Name);
+                    let p1text = document.createTextNode("Release Date: " + upcoming[i].Date);
+                    let p2text = document.createTextNode("Type : " + upcoming[i].Type);
+                    }
+
+                div1.appendChild(h2);
+                div1.appendChild(p1);
+                div1.appendChild(p2);
+            }
+
+        </script>
+    </head>
+    <body>
+        
+<!--By clicking on Login, it will redirect to the login page-->
+<!--By clicking on Gaming World icon or name or Home in Nav menu, it will redirect to the home page-->
+<!--By clicking on Privacy Policies button, it will redirect to the Privacy policy page-->
+<!--By clicking on game photos, it will redirect to the Game specific pages-->
+<!--Navigation menu also works except for the article button and some few links -->
+<!--Only GTA5, WWE and PUBG links will work-->
+<!--Validator shows an error of "The element a must not appear as a descendant of the button element.". Actually, we don't know how to link the page to the button i.e., why we used the anchot(a) tag to link pages.-->
+        
+        <header>
+            <a href="index.html">
+                <img src="img/gamingworld.png" alt="Gaming World Icon" id="icon">   
+                <h1>Gaming World</h1>
+            </a>
+            <button type="submit" onclick="logIn();" id="signup-but">Sign up</a></button>
+            <button type="submit" onclick="logIn();" id="login-but">Login</a></button>
+            <div class="search-button">
+                <input type="text" value="" id="searchbox" placeholder="Search">
+                <button type="submit" id="search"></button>
+            </div>
+            <div id="navigation-bar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Game" id="game"  onclick="logIn();">Games</a>
+				            <ul id="myUL">
+                                <li><a href="gta5.html" title="">GTA 5</a></li>
+                                <li><a href="pubg.html" title="">Pubg</a></li>
+                                <li><a href="wwe.html" title="">WWE</a></li>
+                                <li><a href="#godofwar">God Of War</a></li>
+                                <li><a href="#needforspeed" title="">Need For Speed</a></li>
+                                <li><a href="#tekken" title="">Tekken</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a href="upcoming.html">Upcoming Games</a></li>
+                        <li><a href="Reviews">Reviews</a>
+                            <ul>
+                                <li><a href="gta5.html#customer-review" title="">GTA 5</a></li>
+                                <li><a href="pubg.html#customer-review" title="">Pubg</a></li>
+                                <li><a href="wwe.html#customer-review" title="">WWE</a></li>
+                                <li><a href="#godofwar">God Of War</a></li>
+                                <li><a href="#needforspeed" title="">Need For Speed</a></li>
+                                <li><a href="#tekken" title="">Tekken</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="game1">
+                <a href="#gta5">
+                    <img src="img/gta5.jpg" alt="GTA 5">
+                </a>
+            </div>
+            <div id="game2">
+                <a href="#godofwar">
+                    <img src="img/godofwar.jpg" alt="God Of War">
+                </a>
+                <a href="#tekken7">
+                    <img src="img/tekken.jpg" alt="Tekken 7">
+                </a>
+                <a href="#pubg">
+                    <img src="img/pubg.jpg" alt="PUBG">
+                </a>
+                <a href="#wwe">
+                    <img src="img/wwe.jpg" alt="WWE">
+                </a>
+            </div>
+            <article id="recomgames"> 
+                <h2 id="recom">Featured &amp; Recommended</h2>
+                <section id="godofwar">
+                    <h4>God Of War</h4>
+                    <img src="img/godofwar.jpg" alt="GodOfWar">
+                    <p><strong>God of War</strong> is an action-adventure video game developed by Santa Monica Studio and published by Sony I  nteractive Entertainment <abbr title="Sony Interactive Entertainment">(SIE)</abbr>. Released on April 20, 2018, for the PlayStation 4 console, it is the eighth installment in the God of War series, the eighth chronologically, and the sequel to 2010's God of War III. <br><br>
+                    <a #="">Visit Game page for more information</a></p>
+                </section>
+                <section id="gta5">
+                    <h4>GTA 5</h4>
+                    <img src="img/gta5.jpg" alt="GTA5">
+                    <p><strong style="font-size:25px;">Grand Theft Auto V</strong> for PC offers players the option to explore the award-   winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.<br><br>
+                    <a #="">Visit Game page for more information</a></p>
+                </section>
+                <section id="pubg">
+                    <h4>Pubg</h4>
+                    <img src="img/pubg.jpg" alt="PUBG">
+                    <p><strong>PUBG</strong> is a battle royale shooter that pits 100 players against each other in a struggle for survival. Gather supplies and outwit your opponents to become the last person standing.<br><br>
+                    Visit <a href="pubg.html">Game page</a> for more information</p>
+                </section>
+                <section id="wwe">
+                    <h4>WWE 2k17</h4>
+                    <img src="img/wwe.jpg" alt="WWE">
+                    <p>Now on PC! Welcome to Suplex City, courtesy of cover Superstar Brock Lesnar! <strong> WWE 2K17</strong> returns as the reigning, defending, champion of fighting video games! It is the best-selling video game among the franchises with 47 million copies shipped.<br><br>
+                        <a #="">Visit Game page for more information</a></p>
+                </section>
+                <section id="needforspeed">
+                    <h4>Need For Speed</h4>
+                    <img src="img/needforspeed.jpg" alt="NeedForSpeed">
+                    <p><strong>Need for Speed</strong> is a racing video game franchise published by Electronic Arts and currently developed    by Ghost Games. The series centers around illicit street racing and in general tasks players to complete various types of races while evading the local law enforcement in police pursuits.<br><br>
+                    <a #="">Visit Game page for more information</a></p>
+                </section>
+                <section id="tekken">
+                    <h4>Tekken</h4>
+                    <img src="img/tekken.jpg" alt="Tekken">
+                    <p>In <strong>Tekken 7</strong>, discover the epic conclusion of the long-time clan warfare between members of the Mishima family. Powered by Unreal Engine 4, the legendary fighting game franchise fights back with stunning story-driven cinematic battles and intense duels that can be enjoyed with friends and rivals.<br><br>
+                    <a #="">Visit Game page for more information</a></p>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p><small>&copy; 2019 Gaming World.</small> All rights reserved. All trademarks are property of their respective owners in the US and other countries. Read our <a href="about.html#privacy-policy" id="pp">Privacy Policies</a> for more information.</p>
+            <p><small>Made by:- Manjot Singh Saha and Gurinder Singh</small></p>
+        </footer>
+    </body>
+</html>
