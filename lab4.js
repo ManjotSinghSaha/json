@@ -36,4 +36,4 @@ function upcoming(jsonObj) {
 	  div1.appendChild(p2);
 }
 // calling the load asset function to load data of the json file from the server.
-		loadAsset('upcoming.json', 'json', upcoming);
+		loadAsset('https://manjotsinghsaha.github.io/json/upcoming.json', 'json', upcoming);
