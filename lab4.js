@@ -24,11 +24,13 @@ function upcoming(jsonObj) {
 		let h2text = document.createTextNode(upcoming[i].Name);
 		let p1text = document.createTextNode("Release Date: " + upcoming[i].Date);
 		let p2text = document.createTextNode("Type : " + upcoming[i].Type);
-		}
-
+		
 		h2.appendChild(h2text);
 		p1.appendChild(p1text);
 		p2.appendChild(p2text);
+		
+		}
+
 		
 
 	  div1.appendChild(h2);
