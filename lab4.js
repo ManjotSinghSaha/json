@@ -29,13 +29,15 @@ function upcoming(jsonObj) {
 		p1.appendChild(p1text);
 		p2.appendChild(p2text);
 		
+		div1.appendChild(h2);
+	  	div1.appendChild(p1);
+	  	div1.appendChild(p2);
+		
 		}
 
 		
 
-	  div1.appendChild(h2);
-	  div1.appendChild(p1);
-	  div1.appendChild(p2);
+	  
 }
 // calling the load asset function to load data of the json file from the server.
 		loadAsset('https://manjotsinghsaha.github.io/json/upcoming.json', 'json', upcoming);
